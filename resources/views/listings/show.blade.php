@@ -1,6 +1,8 @@
-@extends("layout")
+{{-- @extends("layout")
 
-@section("content")
+@section("content") --}}
+
+<x-layout>
 @include('partials._search')
 
 <div class="mx-4">
@@ -33,4 +35,6 @@
 
 </div>
 
-@endsection
+</x-layout>
+
+{{-- @endsection --}}

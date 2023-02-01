@@ -8,16 +8,17 @@ use App\Models\Listing;
 class ListingController extends Controller
 {
     //get and show all listings
-    public function index(){
-        return view('listings', [
+    public function index(Request $request){
+
+        return view('listings.index', [
             "heading" => "Latest Listings",
-            "listings" => Listing::all()
+            "listings" => Listing::latest()->get()
         ]);
     }
 
     //show a single listing
     public function show(Listing $listing){
-        return view("listing", [
+        return view("listings.show", [
             "listing" => $listing
         ]);
     }

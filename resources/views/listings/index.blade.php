@@ -1,6 +1,7 @@
-@extends("layout")
+{{-- @extends("layout") --}}
 
-@section("content")
+<x-layout >
+{{-- @section("content") --}}
 
 
 
@@ -20,4 +21,6 @@
   <x-listing-card :listing="$listing"/>
 @endforeach
 
-@endsection
+{{-- @endsection --}}
+
+</x-layout>
